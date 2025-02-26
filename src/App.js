@@ -23,7 +23,7 @@ app.post('/send-email', async (req, res) => {
                 pass: process.env.SMTP_PASS
             }
         });
-
+<
         await transporter.sendMail({
             from: process.env.SMTP_USER,
             to: email,
