@@ -1,10 +1,12 @@
 const express = require('express');
 const nodemailer = require('nodemailer');
+const cors = require('cors');
 require('dotenv').config();
 
 const app = express();
 const port = process.env.PORT || 5000;
 
+app.use(cors()); // Habilitar CORS para todas las rutas
 app.use(express.json());
 
 app.post('/send-email', async (req, res) => {
